@@ -1,0 +1,4 @@
+SELECT * FROM `subscription` WHERE TIMESTAMP_TRUNC(_PARTITIONTIME, DAY) = TIMESTAMP("2024-08-11") AND status=200 order by date_time desc  LIMIT 1000
+
+
+SELECT * FROM `subscription` where msisdn='+8801900000000' order by date_time desc;

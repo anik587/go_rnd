@@ -1,0 +1,26 @@
+Get partition metadata
+You can get information about partitioned tables in the following ways:
+
+Use the INFORMATION_SCHEMA.PARTITIONS view (Preview).
+Use the __PARTITIONS_SUMMARY__ meta-table (legacy SQL only).
+Getting partition metadata using INFORMATION_SCHEMA views
+When you query the INFORMATION_SCHEMA.PARTITIONS view, the query results contain one row for each partition. For example, the following query lists all of the table partitions in the dataset named mydataset:
+
+
+
+SELECT table_name, partition_id, total_rows
+FROM `mydataset.INFORMATION_SCHEMA.PARTITIONS`
+WHERE partition_id IS NOT NULL
+
+
+
+
+=============================================================================================
+
+Table type					Partitioned
+Partitioned by				DAY
+Partitioned on field 		_PARTITIONTIME
+Partition expiry			Partitions do not expire
+Partition filter			Not required
+
+
