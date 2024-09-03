@@ -1,0 +1,45 @@
+{
+  "condition": {
+    "all": [
+      {
+        "identifier": "earlybird",
+        "operator": "=",
+        "value": 1,
+        "priority": 10
+      },
+      {
+        "identifier": "mfs",
+        "operator": "=",
+        "value": "bkash",
+        "priority": 11
+      }
+    ],
+    "any": [
+      {
+        "identifier": "productcode",
+        "operator": "=",
+        "value": 5001,
+        "priority": 12
+      },
+      {
+        "identifier": "productcode",
+        "operator": "=",
+        "value": 2001,
+        "priority": 9
+      },
+      {
+        "identifier": "geolocation",
+        "operator": "=",
+        "value": "BD",
+        "priority": 6
+      }
+    ]
+  },
+  "event": {
+    "type": "discount",
+    "payload": {
+      "percentage": 20,
+      "item": "productcode"
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+    "condition": {
+      "any": [
+        {
+          "identifier": "a",
+          "operator": "=",
+          "value": 1,
+          "any": [
+            {
+              "identifier": "a",
+              "operator": "=",
+              "value": 1,
+              "any": [
+                {
+                  "identifier": "c",
+                  "operator": "=",
+                  "value": 1
+                },
+                {
+                  "identifier": "c",
+                  "operator": "=",
+                  "value": 2
+                }
+              ]
+            },
+            {
+              "identifier": "b",
+              "operator": "=",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "identifier": "b",
+          "operator": "=",
+          "value": 2
+        }
+      ],
+      "all": [
+        {
+          "identifier": "a",
+          "operator": "=",
+          "value": 15,
+          "any": [
+            {
+              "identifier": "a",
+              "operator": "=",
+              "value": 1
+            },
+            {
+              "identifier": "b",
+              "operator": "=",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "identifier": "b",
+          "operator": "=",
+          "value": 15,
+          "any": [
+            {
+              "identifier": "a",
+              "operator": "=",
+              "value": 1
+            },
+            {
+              "identifier": "b",
+              "operator": "=",
+              "value": 2
+            }
+          ]
+        }
+      ]
+    },
+    "event": {
+      "type": "win",
+      "payload": {
+        "percentage": 10,
+        "item": "apple"
+      }
+    }
+  }
